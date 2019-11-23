@@ -1,0 +1,37 @@
+Traverse the tree using the depth first search approach
+
+class Node {
+  constructor(name){
+    this.name = name
+    this.children = []
+  }
+  
+  addChild(name){
+    this.children.push(new Node(name))
+    return this;
+  }
+  
+  depthFirstSearch(array){
+    let node = this
+    array.push(node.name)
+    node.children.forEach((child) => {
+      child.depthFirstSearch(array)
+    })
+    
+    return array
+  }
+}
+
+
+array
+
+let node = this
+ array.push(node.value)
+ 
+ node.children.forEach((child) => {
+    child.depthFirstSearch(array)
+ })
+ 
+ return array
+ 
+ Done -> 9 mins
